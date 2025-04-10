@@ -1,0 +1,18 @@
+.taskCardContainer{
+    width: 90%;
+    margin: auto;
+    padding: 30px 10px;
+    border-radius: 30px;
+}
+
+.doneColor{
+    background-color: rgb(35, 214, 47);
+}
+
+.progressColor{
+    background-color: rgb(243, 243, 8);
+}
+
+.openColor{
+    background-color: rgb(63, 184, 217);
+}

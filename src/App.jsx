@@ -1,41 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import './App.css'
+import TaskCard from './components/TaskCard'
 
 function App() {
   const [tasks, setTasks] = useState([{
     "id": 0,
     "title": "Tittle of the task",
     "description": "task of the student",
-    "Status": "OPEN"
+    "status": "OPEN"
   },
   {
     "id": 0,
-    "title": "Tittle of the task",
+    "title": "Tittle of the ",
     "description": "task of the student",
-    "Status": "OPEN"
+    "status": "IN_PROGRESS"
   },
   {
     "id": 0,
-    "title": "Tittle of the task",
+    "title": "Tittle of the ahhhhh",
     "description": "task of the student",
-    "Status": "OPEN"
+    "status": "DONE"
   }])
 
   useEffect(()=>{
     const getTasks = async ()=>{
       const tasks = await axios.get(`${VITE_API_URL}/taks`)
-      setTasks=(tasks.data)
+      setTasks(tasks.data)
     }
-    getTasks();
+    //getTasks();
   },[])
 
   return (
     <div>
       <h1>Mis tareas</h1>
+      <div className='taskList'>
       {tasks.map((task)=>{
-        return<div>{task.name}</div>
+        return<TaskCard task={task}/>
       })}
+      </div>
     </div>
   )
 }

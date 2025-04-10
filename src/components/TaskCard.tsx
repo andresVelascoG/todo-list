@@ -1,10 +1,13 @@
 import React from 'react'
-import styles from './TaskCard.module.css';
+import './TaskCard.css';
 
-export default function TaskCard({id, name, }) {
+export default function TaskCard({task}) {
+    const statusClass = task.status == "DONE"?
+    "doneColor" : task.status == "IN_PROGRESS"?
+    "progressColor":"openColor"
   return (
-    <div>
-
-    </div>
+    <a className={`taskCardContainer ${statusClass}`}>
+        {task.title}
+    </a>
   )
 }
