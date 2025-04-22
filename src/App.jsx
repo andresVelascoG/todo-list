@@ -5,19 +5,19 @@ import TaskCard from './components/TaskCard'
 
 function App() {
   const [tasks, setTasks] = useState([{
-    "id": 0,
+    "id": "utre094",
     "title": "Tittle of the task",
     "description": "task of the student",
     "status": "OPEN"
   },
   {
-    "id": 0,
+    "id": "utre094",
     "title": "Tittle of the ",
     "description": "task of the student",
     "status": "IN_PROGRESS"
   },
   {
-    "id": 0,
+    "id": "utre094",
     "title": "Tittle of the ahhhhh",
     "description": "task of the student",
     "status": "DONE"
@@ -25,7 +25,7 @@ function App() {
 
   useEffect(()=>{
     const getTasks = async ()=>{
-      const tasks = await axios.get(`${VITE_API_URL}/taks`)
+      const tasks = await axios.get(`${VITE_API_URL}/tasks`)
       setTasks(tasks.data)
     }
     //getTasks();

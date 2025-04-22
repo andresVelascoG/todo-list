@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# dotenv environment variables file
+.env
+config/localEnv.json
+.npmrc
+credentials*
