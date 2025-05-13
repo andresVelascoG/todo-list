@@ -23,3 +23,57 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.headerBar{
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  gap: 30px
+}
+.headerClickeables{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.searchContainer{
+  width: 50%;
+}
+
+.buttonsContainer{
+  min-width: 450px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .headerBar{
+    flex-direction: column-reverse;
+  }
+  .headerClickeables{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .buttonsContainer{
+    width: auto;
+    justify-content: start;
+  }
+  .searchContainer{
+    width: 100%;
+  }
+}
