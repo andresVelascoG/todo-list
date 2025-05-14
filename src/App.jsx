@@ -104,7 +104,7 @@ function App() {
             onClickEvent={() => {
               console.log("Fui clickeadoooooo");
             }}
-            color="green"
+            color="greenButton"
           >
             Add
           </Button>
