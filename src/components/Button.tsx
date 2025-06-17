@@ -7,7 +7,7 @@ export default function Button({children, onClickEvent, color='white', selected}
   
   return (
     <button
-    className={`${color} ${isSelected}`}
+    className={`${color} ${isSelected} mainButton`}
     onClick={onClickEvent}
     >
         {children}

@@ -69,6 +69,7 @@ function App() {
               onClickEvent={() => {
                 console.log("Fui clickeadoooooo");
               }}
+              
             >
               {" "}
               All{" "}
