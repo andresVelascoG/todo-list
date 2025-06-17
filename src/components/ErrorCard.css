@@ -1,0 +1,9 @@
+.errorCard {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+  color: #b30000;
+  padding: 16px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+}

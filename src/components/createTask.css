@@ -1,0 +1,26 @@
+.task-reg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%; 
+}
+
+.task-reg-container input {
+    width: 250px; 
+    padding: 10px;
+    margin: 10px 10px;
+    box-sizing: border-box;
+}
+.registerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.registerContainer button{
+    margin-bottom: 5px;
+}
+p{
+    color: rgb(0, 0, 0);
+}
