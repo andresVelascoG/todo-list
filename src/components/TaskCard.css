@@ -1,0 +1,96 @@
+.taskCardContainer {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+/* .taskCardContainer:hover {
+  transform: translateY(-3px);
+} */
+
+.taskDetails {
+  flex: 2;
+}
+
+.taskTitle {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #222;
+  text-align: left;
+}
+
+.taskDescription {
+  margin-top: 0.5rem;
+  font-size: 12px;
+  text-align: left;
+  color: #444;
+}
+
+.taskActions {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.iconButton {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconButton.delete {
+  color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+.iconButton.delete:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.iconButton.update {
+  color: #007bff;
+  border-color: #007bff;
+}
+.iconButton.update:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.iconButton.checklist {
+  color: #28a745;
+  border-color: #28a745;
+}
+.iconButton.checklist:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.doneColor {
+  background-color: #d4edda;
+}
+
+.progressColor {
+  background-color: #fff3cd;
+}
+
+.openColor {
+  background-color: #d1ecf1;
+}
+
+.errorStatus {
+  background-color: #f8d7da;
+}
