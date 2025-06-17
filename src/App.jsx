@@ -28,15 +28,43 @@ function App() {
     },
   ]);
   const [filteredTasks, setFilteredTasks] = useState([]);
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const getTasks = async () => {
-      const tasks = await axios.get(`${apiUrl}/tasks`);
-      setTasks(tasks.data.data);
-      setFilteredTasks(tasks.data.data);
+      const token = localStorage.getItem('token');
+      const searchParams = new URLSearchParams(window.location.search);
+      const status = searchParams.get('status');
+
+      let url = `${apiUrl}/tasks`;
+      if (status) {
+        url += `?status=${status}`;
+      }
+
+      try {
+        const response = await axios.get(url, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        setTasks(response.data.data);
+        setFilteredTasks(response.data.data);
+      } catch (error) {
+        console.error('Error al obtener las tareas:', error);
+        if (error.response?.status === 401) {
+          window.location.href = '/';
+        } else {
+          setErrorMessage(
+            'There are no tasks with this status.'
+          );
+        }
+      }
     };
-    //getTasks();
+
+    getTasks();
   }, []);
 
   useEffect(() => {
